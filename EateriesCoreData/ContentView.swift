@@ -12,13 +12,13 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Eatery.name, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \AllEateries.name, ascending: true)],
         animation: .default)
-    private var eateries: FetchedResults<Eatery>
+    private var allEateries: FetchedResults<AllEateries>
 
     var body: some View {
         NavigationView {
-            MasterView(eateries: eateries)
+            MasterView(allEateries: (allEateries.first ?? AllEateries(context: viewContext)))
         }
     }
 
