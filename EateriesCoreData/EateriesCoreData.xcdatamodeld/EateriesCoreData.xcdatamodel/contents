@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllEateries" representedClassName="AllEateries" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <relationship name="eateries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="planet" inverseEntity="Eatery"/>
+    </entity>
+    <entity name="Eatery" representedClassName="Eatery" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <relationship name="planet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AllEateries" inverseName="eateries" inverseEntity="AllEateries"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="eatery" inverseEntity="Review"/>
+    </entity>
+    <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="reviewID" attributeType="String" defaultValueString=""/>
+        <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="reviews" inverseEntity="Eatery"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Eatery" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Review" positionX="179.98974609375" positionY="-141.0371398925781" width="128" height="88"/>
+        <element name="AllEateries" positionX="232.1893310546875" positionY="152.208251953125" width="128" height="73"/>
     </elements>
 </model>
