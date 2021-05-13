@@ -16,7 +16,7 @@
 		CAA2B843264D4603004CF114 /* EateriesCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B842264D4603004CF114 /* EateriesCoreDataTests.swift */; };
 		CAA2B84E264D4603004CF114 /* EateriesCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B84D264D4603004CF114 /* EateriesCoreDataUITests.swift */; };
 		CAA2B878264D4E22004CF114 /* Eatery+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B877264D4E22004CF114 /* Eatery+ViewModel.swift */; };
-		CAA2B87D264D591F004CF114 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B87C264D591E004CF114 /* MasterView.swift */; };
+		CAA2B8D6264D636E004CF114 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B8D5264D636E004CF114 /* MasterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		CAA2B872264D4B40004CF114 /* AllEateries+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllEateries+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CAA2B873264D4B40004CF114 /* Review+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CAA2B877264D4E22004CF114 /* Eatery+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eatery+ViewModel.swift"; sourceTree = "<group>"; };
-		CAA2B87C264D591E004CF114 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		CAA2B8D5264D636E004CF114 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 				CAA2B86D264D4B40004CF114 /* Generated Code */,
 				CAA2B82B264D45FE004CF114 /* EateriesCoreDataApp.swift */,
 				CAA2B82D264D45FE004CF114 /* ContentView.swift */,
-				CAA2B87C264D591E004CF114 /* MasterView.swift */,
+				CAA2B8D5264D636E004CF114 /* MasterView.swift */,
 				CAA2B877264D4E22004CF114 /* Eatery+ViewModel.swift */,
 				CAA2B82F264D4603004CF114 /* Assets.xcassets */,
 				CAA2B834264D4603004CF114 /* Persistence.swift */,
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA2B87D264D591F004CF114 /* MasterView.swift in Sources */,
+				CAA2B8D6264D636E004CF114 /* MasterView.swift in Sources */,
 				CAA2B835264D4603004CF114 /* Persistence.swift in Sources */,
 				CAA2B82E264D45FE004CF114 /* ContentView.swift in Sources */,
 				CAA2B838264D4603004CF114 /* EateriesCoreData.xcdatamodeld in Sources */,
