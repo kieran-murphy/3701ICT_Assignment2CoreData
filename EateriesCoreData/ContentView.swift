@@ -17,20 +17,18 @@ struct ContentView: View {
     private var eateries: FetchedResults<Eatery>
 
     var body: some View {
-        List {
-            ForEach(eateries) { eatery in
-                Text(eatery.nameString)
+        NavigationView {
+            List {
+                ForEach(eateries) { eatery in
+                    Text(eatery.nameString)
+                }
+                .onDelete(perform: deleteItems)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
+            .navigationBarItems(leading: EditButton(), trailing:
+                                    Button(action: addItem) {
+                                        Label("",
+                                              systemImage: "plus")
+                                    })
         }
     }
 
