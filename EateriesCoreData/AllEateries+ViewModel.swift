@@ -9,6 +9,11 @@ import Foundation
 import CoreData
 
 extension AllEateries {
+    var nameString: String {
+        get { name ?? ""}
+        set { name = newValue }
+    }
+    
     var eateriesArray: [Eatery] {
         get { eateries?.array as? [Eatery] ?? [] }
         set { eateries = NSOrderedSet(array: newValue) }
@@ -22,7 +27,9 @@ extension AllEateries {
         
             let newEatery = Eatery(context: viewContext)
             newEatery.name = "Eatery"
+            newEatery.location = "Enter Location Here"
             addToEateries(newEatery)
+            
         //  newEatery.planet = self
 
             do {

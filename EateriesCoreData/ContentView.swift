@@ -20,6 +20,7 @@ struct ContentView: View {
         NavigationView {
             MasterView(allEateries: (allEateries.first ?? AllEateries(context: viewContext)))
         }
+        
     }
 
     

@@ -14,6 +14,11 @@ extension Eatery {
         set { name = newValue }
     }
     
+    var locationString: String {
+        get { location ?? ""}
+        set { location = newValue }
+    }
+    
     var reviewsArray: [Review] {
         get { reviews?.array as? [Review] ?? [] }
         set { reviews = NSOrderedSet(array: newValue) }
@@ -27,6 +32,8 @@ extension Eatery {
         
             let newReview = Review(context: viewContext)
             newReview.name = "Review"
+            newReview.reviewID = "Yeeto"
+            
             addToReviews(newReview)
         //  newReview.eatery = self
 
