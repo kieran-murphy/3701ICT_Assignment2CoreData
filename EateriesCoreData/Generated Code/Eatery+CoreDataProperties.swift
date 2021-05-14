@@ -18,6 +18,8 @@ extension Eatery {
 
     @NSManaged public var name: String?
     @NSManaged public var location: String?
+    @NSManaged public var url: String?
+    @NSManaged public var notes: String?
     @NSManaged public var reviews: NSOrderedSet?
     @NSManaged public var planet: AllEateries?
 

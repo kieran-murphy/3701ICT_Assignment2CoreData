@@ -19,6 +19,16 @@ extension Eatery {
         set { location = newValue }
     }
     
+    var notesString: String {
+        get { notes ?? ""}
+        set { notes = newValue }
+    }
+    
+    var urlString: String {
+        get { url ?? ""}
+        set { url = newValue }
+    }
+    
     var reviewsArray: [Review] {
         get { reviews?.array as? [Review] ?? [] }
         set { reviews = NSOrderedSet(array: newValue) }

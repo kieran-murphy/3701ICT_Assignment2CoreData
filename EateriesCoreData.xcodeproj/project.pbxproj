@@ -21,6 +21,7 @@
 		CAA2B8E0264DFD00004CF114 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B8DF264DFD00004CF114 /* RowView.swift */; };
 		CAA2B8E5264DFFC8004CF114 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B8E4264DFFC8004CF114 /* DetailView.swift */; };
 		CAA2B8EA264E0168004CF114 /* Review+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B8E9264E0168004CF114 /* Review+ViewModel.swift */; };
+		CAA2B8EF264E6FED004CF114 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B8EE264E6FEC004CF114 /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CAA2B8DF264DFD00004CF114 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		CAA2B8E4264DFFC8004CF114 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CAA2B8E9264E0168004CF114 /* Review+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+ViewModel.swift"; sourceTree = "<group>"; };
+		CAA2B8EE264E6FEC004CF114 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				CAA2B82B264D45FE004CF114 /* EateriesCoreDataApp.swift */,
 				CAA2B82D264D45FE004CF114 /* ContentView.swift */,
 				CAA2B8D5264D636E004CF114 /* MasterView.swift */,
+				CAA2B8EE264E6FEC004CF114 /* ImageDownloader.swift */,
 				CAA2B8DF264DFD00004CF114 /* RowView.swift */,
 				CAA2B8E4264DFFC8004CF114 /* DetailView.swift */,
 				CAA2B877264D4E22004CF114 /* Eatery+ViewModel.swift */,
@@ -309,6 +312,7 @@
 				CAA2B82E264D45FE004CF114 /* ContentView.swift in Sources */,
 				CAA2B8EA264E0168004CF114 /* Review+ViewModel.swift in Sources */,
 				CAA2B8E0264DFD00004CF114 /* RowView.swift in Sources */,
+				CAA2B8EF264E6FED004CF114 /* ImageDownloader.swift in Sources */,
 				CAA2B838264D4603004CF114 /* EateriesCoreData.xcdatamodeld in Sources */,
 				CAA2B82C264D45FE004CF114 /* EateriesCoreDataApp.swift in Sources */,
 				CAA2B8DB264DE717004CF114 /* AllEateries+ViewModel.swift in Sources */,

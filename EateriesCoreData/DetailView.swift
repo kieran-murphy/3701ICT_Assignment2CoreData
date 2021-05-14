@@ -14,7 +14,16 @@ struct DetailView: View {
     var body: some View {
         VStack {
             ScrollView {
+                imageDownload(eatery.urlString)
+                .resizable()
+                .frame(width: 340.0,height:280.0)
+                .aspectRatio(contentMode: .fill)
+                .shadow(radius: 6)
+                .padding(.bottom)
+                
                 VStack(alignment: .leading) {
+                    
+                    
                     TextField("Enter Name Here", text: $eatery.nameString, onCommit: {
                         try? viewContext.save()
                     })
@@ -26,9 +35,31 @@ struct DetailView: View {
                     })
                     .padding(.leading)
                     .font(Font.headline.weight(.thin))
+                    
+                    TextField("Enter Url Here", text: $eatery.urlString, onCommit: {
+                        try? viewContext.save()
+                    })
+                    .padding(.leading)
+                    .font(Font.headline.weight(.regular))
+                    
+                    TextField("Enter Notes Here", text: $eatery.notesString, onCommit: {
+                        try? viewContext.save()
+                    })
+                    .padding(.leading)
+                    .font(Font.headline.weight(.regular))
                 
+                    Text("Reviews:")
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading)
+                    
                 }
             }
+            
+                
+            
+            
+          /*
         List {
             ForEach(eatery.reviewsArray) { review in
                 ReviewRowView(review: review)
@@ -45,7 +76,7 @@ struct DetailView: View {
                     eatery.deleteItems(offsets: offsets)
                 }
             }
-        }
+        } */
         .navigationBarItems(trailing: Button(action: {
             withAnimation {
                 eatery.addItem()

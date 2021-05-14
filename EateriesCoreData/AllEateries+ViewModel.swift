@@ -27,7 +27,11 @@ extension AllEateries {
         
             let newEatery = Eatery(context: viewContext)
             newEatery.name = "Eatery"
-            newEatery.location = "Enter Location Here"
+            newEatery.location = "Location"
+            newEatery.notes = ""
+            newEatery.url = ""
+        
+        
             addToEateries(newEatery)
             
         //  newEatery.planet = self
