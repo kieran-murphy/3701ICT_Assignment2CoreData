@@ -14,7 +14,7 @@ struct DetailView: View {
     var body: some View {
         List {
             ForEach(eatery.reviewsArray) { review in
-                Text(review.name)
+                Text(review.nameString)
 //                NavigationLink(
 //                    destination: ReviewView(review: review),
 //                    label: {
@@ -25,7 +25,7 @@ struct DetailView: View {
             }
             .onDelete { offsets in
                 withAnimation {
-                    review.deleteItems(offsets: offsets)
+                    eatery.deleteItems(offsets: offsets)
                 }
             }
         }
@@ -37,5 +37,6 @@ struct DetailView: View {
             Label("", systemImage: "plus")
         })
     }
+
     
 

@@ -17,7 +17,7 @@ extension Eatery {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var reviews: NSSet?
+    @NSManaged public var reviews: NSOrderedSet?
     @NSManaged public var planet: AllEateries?
 
 }
