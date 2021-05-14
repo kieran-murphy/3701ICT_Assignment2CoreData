@@ -14,7 +14,7 @@ struct DetailView: View {
     var body: some View {
         List {
             ForEach(eatery.reviewsArray) { review in
-                Text(review.nameString)
+                ReviewRowView(review: review)
 //                NavigationLink(
 //                    destination: ReviewView(review: review),
 //                    label: {
@@ -22,7 +22,7 @@ struct DetailView: View {
 //                    }) {
                     
                 }
-            }
+            
             .onDelete { offsets in
                 withAnimation {
                     eatery.deleteItems(offsets: offsets)
@@ -37,6 +37,15 @@ struct DetailView: View {
             Label("", systemImage: "plus")
         })
     }
+}
 
-    
+struct ReviewRowView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var review: Review
+    var body: some View {
+        TextField("Enter Review Name", text: $review.nameString, onCommit: {
+            try? viewContext.save()
+        })
+    }
+}
 
