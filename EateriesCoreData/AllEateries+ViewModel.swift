@@ -23,6 +23,7 @@ extension AllEateries {
             let newEatery = Eatery(context: viewContext)
             newEatery.name = "Eatery"
             addToEateries(newEatery)
+        //  newEatery.planet = self
 
             do {
                 try viewContext.save()

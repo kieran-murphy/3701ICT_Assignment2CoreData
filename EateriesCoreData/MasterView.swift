@@ -15,15 +15,30 @@ struct MasterView: View {
     var body: some View {
         List {
             ForEach(allEateries.eateriesArray) { eatery in
-                Text(eatery.nameString)
+                NavigationLink(
+                    destination: DetailView(eatery: eatery),
+                    label: {
+                        RowView(eatery: eatery)
+                    })
+                    
+                
             }
-            .onDelete(perform: allEateries.deleteItems)
+            .onDelete { offsets in
+                withAnimation {
+                    allEateries.deleteItems(offsets: offsets)
+                }
+            }
         }
-        .navigationBarItems(leading: EditButton(), trailing:
-                                Button(action: allEateries.addItem) {
-                                    Label("",
-                                          systemImage: "plus")
-                                })
+        .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+            withAnimation {
+                allEateries.addItem()
+            }
+        }) {
+            Label("", systemImage: "plus")
+        })
     }
     
 }
+
+
+
