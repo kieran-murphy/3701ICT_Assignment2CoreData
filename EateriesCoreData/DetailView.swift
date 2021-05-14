@@ -45,30 +45,24 @@ struct DetailView: View {
                     TextField("Enter Notes Here", text: $eatery.notesString, onCommit: {
                         try? viewContext.save()
                     })
-                    .padding(.leading)
+                    .padding(.all)
                     .font(Font.headline.weight(.regular))
                 
                     Text("Reviews:")
+                        
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading)
-                    
+                        .padding(.all)
+                    ForEach(eatery.reviewsArray, id: \.self) { review in
+                        Text(review.nameString)
+                                            Divider()
+                                        }.padding(.horizontal)
                 }
             }
-            
-                
-            
-            
-          /*
+        /*
         List {
             ForEach(eatery.reviewsArray) { review in
                 ReviewRowView(review: review)
-//                NavigationLink(
-//                    destination: ReviewView(review: review),
-//                    label: {
-//                        ReviewRowView(review: review)
-//                    }) {
-                    
                 }
             
             .onDelete { offsets in
@@ -76,14 +70,14 @@ struct DetailView: View {
                     eatery.deleteItems(offsets: offsets)
                 }
             }
-        } */
+        }
         .navigationBarItems(trailing: Button(action: {
             withAnimation {
                 eatery.addItem()
             }
         }) {
             Label("", systemImage: "plus")
-        })
+        }) */
                 
         }
     }
@@ -100,4 +94,3 @@ struct ReviewRowView: View {
         })
     }
 }
-

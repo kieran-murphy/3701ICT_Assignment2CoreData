@@ -24,6 +24,7 @@ struct MasterView: View {
                     
                 
             }
+            
             .onDelete { offsets in
                 withAnimation {
                     allEateries.deleteItems(offsets: offsets)

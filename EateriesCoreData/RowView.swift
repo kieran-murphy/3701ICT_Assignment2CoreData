@@ -14,6 +14,19 @@ struct RowView: View {
         /*TextField("Enter Eatery Name", text: $eatery.nameString, onCommit: {
             try? viewContext.save()
         })*/
-        Text(eatery.nameString)
+        HStack {
+                imageDownload(eatery.urlString)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                VStack(alignment: .leading) {
+                    Text(eatery.nameString)
+                    Text(eatery.locationString)
+                    .italic()
+                    .fontWeight(.ultraLight)
+                    .multilineTextAlignment(.leading)
+                }
+                Spacer()
+            }
     }
 }
+
