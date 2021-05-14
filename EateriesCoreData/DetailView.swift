@@ -59,25 +59,6 @@ struct DetailView: View {
                                         }.padding(.horizontal)
                 }
             }
-        /*
-        List {
-            ForEach(eatery.reviewsArray) { review in
-                ReviewRowView(review: review)
-                }
-            
-            .onDelete { offsets in
-                withAnimation {
-                    eatery.deleteItems(offsets: offsets)
-                }
-            }
-        }
-        .navigationBarItems(trailing: Button(action: {
-            withAnimation {
-                eatery.addItem()
-            }
-        }) {
-            Label("", systemImage: "plus")
-        }) */
                 
         }
     }
@@ -88,7 +69,6 @@ struct ReviewRowView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var review: Review
     var body: some View {
-        //Text(review.reviewID ?? "")
         TextField("Enter Review Name", text: $review.nameString, onCommit: {
             try? viewContext.save()
         })

@@ -21,10 +21,7 @@ struct MasterView: View {
                     label: {
                         RowView(eatery: eatery)
                     })
-                    
-                
             }
-            
             .onDelete { offsets in
                 withAnimation {
                     allEateries.deleteItems(offsets: offsets)

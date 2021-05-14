@@ -8,12 +8,14 @@
 import Foundation
 import CoreData
 
+/// A collection of all the best eateries on planet Earth
 extension AllEateries {
+    /// The name of the collection AllEateries
     var nameString: String {
         get { name ?? ""}
         set { name = newValue }
     }
-    
+    /// Stores the list of eateries as an NSOrderedSet
     var eateriesArray: [Eatery] {
         get { eateries?.array as? [Eatery] ?? [] }
         set { eateries = NSOrderedSet(array: newValue) }
@@ -22,9 +24,8 @@ extension AllEateries {
     var viewContext: NSManagedObjectContext {
         managedObjectContext ?? NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     }
-    
+    /// Adds a new eatery to the list within AllEateries
     func addItem() {
-        
             let newEatery = Eatery(context: viewContext)
             newEatery.name = "Eatery"
             newEatery.location = "Location"
@@ -41,7 +42,7 @@ extension AllEateries {
             }
         
     }
-
+    /// Deletes an eatery from the list of AllEateries
     func deleteItems(offsets: IndexSet) {
         
         offsets.map { eateriesArray[$0] }.forEach(viewContext.delete)

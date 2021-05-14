@@ -20,12 +20,8 @@ struct ContentView: View {
         NavigationView {
             MasterView(allEateries: (allEateries.first ?? AllEateries(context: viewContext)))
         }
-        
     }
-
-    
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
