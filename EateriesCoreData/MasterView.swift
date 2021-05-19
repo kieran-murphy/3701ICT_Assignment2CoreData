@@ -22,12 +22,16 @@ struct MasterView: View {
                         RowView(eatery: eatery)
                     })
             }
+            /*.onMove {
+                allEateries.move(fromOffsets: $0, toOffset: $1)
+            } */
+
             .onDelete { offsets in
                 withAnimation {
                     allEateries.deleteItems(offsets: offsets)
                 }
             }
-        }
+                    }
         .navigationTitle("Eateries")
         .navigationBarItems(leading: EditButton(), trailing: Button(action: {
             withAnimation {

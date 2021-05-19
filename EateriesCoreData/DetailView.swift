@@ -74,3 +74,6 @@ struct ReviewRowView: View {
         })
     }
 }
+
+
+//https://www.sydneycafes.com.au/wp-content/uploads/2016/11/Sydneys-20-Best-Restaurants.jpg

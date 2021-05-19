@@ -55,4 +55,16 @@ extension AllEateries {
             }
         }
     
+    /*func moveItems(offsets: IndexSet) {
+        
+        offsets.map { fromOffsets: $0, toOffset: $1  }.forEach(viewContext.move)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        } */
+    
 }
