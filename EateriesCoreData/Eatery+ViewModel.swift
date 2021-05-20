@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import CoreLocation
 
 ///🍽 A place where humans can exchange their currency for food
 extension Eatery {
@@ -35,6 +36,24 @@ extension Eatery {
         get { reviews?.array as? [Review] ?? [] }
         set { reviews = NSOrderedSet(array: newValue) }
     }
+    /*
+    struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+    }
+    
+    var coordinates: Coordinates {
+        get { Coordinates.latitude: 0.0, Coordinates.longitude: 0.0 }
+        set { Coordinates = newValue }
+    }
+    
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
+    }
+    */
+    
     
     var viewContext: NSManagedObjectContext {
         managedObjectContext ?? NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
