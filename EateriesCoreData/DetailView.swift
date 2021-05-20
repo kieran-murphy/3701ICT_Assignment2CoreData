@@ -44,10 +44,15 @@ struct DetailView: View {
                     
                     TextField("Enter Notes Here", text: $eatery.notesString, onCommit: {
                         try? viewContext.save()
+                    
+                    
                     })
                     .padding(.all)
                     .font(Font.headline.weight(.regular))
                 
+                    NavigationLink("Location", destination: LocationView())
+                        .padding(.all)
+                    
                     Text("Reviews:")
                         
                         .bold()
