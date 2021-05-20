@@ -50,7 +50,7 @@ struct DetailView: View {
                     .padding(.all)
                     .font(Font.headline.weight(.regular))
                 
-                    NavigationLink("Location", destination: LocationView())
+                    NavigationLink("Location", destination: LocationView(eatery: eatery))
                         .padding(.all)
                     
                     Text("Reviews:")

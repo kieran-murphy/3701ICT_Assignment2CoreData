@@ -9,8 +9,9 @@ import CoreLocation
 import SwiftUI
 
 struct LocationView: View {
+    @ObservedObject var eatery: Eatery
     @State var currentPosition = CLLocationCoordinate2D(latitude: 10, longitude: 5)
-    @State var locationName = ""
+    //@State var locationName = ""
     @State var latitudeString = ""
     @State var longitudeString = ""
     
@@ -21,12 +22,12 @@ struct LocationView: View {
     
             HStack {
                 Text("Name:")
-                TextField("Enter location name", text: $locationName, onCommit: {
+                TextField("Enter location name", text: $eatery.locationString, onCommit: {
                     let geoCoder = CLGeocoder()
                     let region = CLCircularRegion(center: self.currentPosition, radius: 2_000_000, identifier: "\(self.currentPosition)")
-                    geoCoder.geocodeAddressString(self.locationName, in: region) { (placemarks, error) in
+                    geoCoder.geocodeAddressString(eatery.locationString, in: region) { (placemarks, error) in
                         guard let location = placemarks?.first?.location else {
-                            print("Error locating '\(self.locationName)': \(error.map {"\($0)"} ?? "<unknown error>")")
+                            print("Error locating '\(eatery.locationString)': \(error.map {"\($0)"} ?? "<unknown error>")")
                             return
                         }
                         let position = location.coordinate
@@ -54,7 +55,7 @@ struct LocationView: View {
                             print("Error locating \(self.currentPosition.latitude) / \(self.currentPosition.longitude): \(error.map {"\($0)"} ?? "<unknown error>")")
                             return
                         }
-                        self.locationName = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
+                        eatery.locationString = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
                     }
                 })
             }
@@ -75,7 +76,7 @@ struct LocationView: View {
                             print("Error locating \(self.currentPosition.latitude) / \(self.currentPosition.longitude): \(error.map {"\($0)"} ?? "<unknown error>")")
                             return
                         }
-                        self.locationName = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
+                        eatery.locationString = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
                     }
                 })
             }
