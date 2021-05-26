@@ -32,8 +32,6 @@ extension AllEateries {
             newEatery.notes = ""
             newEatery.url = "https://i.imgur.com/y3MMnba.png"
             addToEateries(newEatery)
-            
-
             do {
                 try viewContext.save()
             } catch {
@@ -44,9 +42,7 @@ extension AllEateries {
     }
     /// Deletes an eatery from the list of AllEateries
     func deleteItems(offsets: IndexSet) {
-        
         offsets.map { eateriesArray[$0] }.forEach(viewContext.delete)
-
             do {
                 try viewContext.save()
             } catch {
@@ -55,16 +51,14 @@ extension AllEateries {
             }
         }
     
-    /*func moveItems(offsets: IndexSet) {
-        
-        offsets.map { fromOffsets: $0, toOffset: $1  }.forEach(viewContext.move)
-
+    func moveItems(from: IndexSet, to: Int) {
+        eateriesArray.move(fromOffsets: from, toOffset: to)
             do {
                 try viewContext.save()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        } */
+            } 
+        } 
     
 }

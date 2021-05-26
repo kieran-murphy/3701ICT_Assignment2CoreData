@@ -8,6 +8,13 @@
 import SwiftUI
 import CoreData
 
+//check if coredata is empty
+//if its not empty take data from coredata
+//else
+//get JSON
+//for each
+//assign dummydata <AllEateries>
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -22,11 +29,4 @@ struct ContentView: View {
         }
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
 

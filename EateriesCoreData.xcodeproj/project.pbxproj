@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA7E1066265DBBD5001F9252 /* EateryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E1065265DBBD5001F9252 /* EateryData.swift */; };
+		CA7E106B265DBF4C001F9252 /* EateryTwo+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E106A265DBF4C001F9252 /* EateryTwo+ViewModel.swift */; };
 		CAA2B82C264D45FE004CF114 /* EateriesCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B82B264D45FE004CF114 /* EateriesCoreDataApp.swift */; };
 		CAA2B82E264D45FE004CF114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA2B82D264D45FE004CF114 /* ContentView.swift */; };
 		CAA2B830264D4603004CF114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA2B82F264D4603004CF114 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA7E1065265DBBD5001F9252 /* EateryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryData.swift; sourceTree = "<group>"; };
+		CA7E106A265DBF4C001F9252 /* EateryTwo+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EateryTwo+ViewModel.swift"; sourceTree = "<group>"; };
 		CAA2B828264D45FE004CF114 /* EateriesCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EateriesCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA2B82B264D45FE004CF114 /* EateriesCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesCoreDataApp.swift; sourceTree = "<group>"; };
 		CAA2B82D264D45FE004CF114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,12 +138,14 @@
 				CAA2B82B264D45FE004CF114 /* EateriesCoreDataApp.swift */,
 				CAA2B82D264D45FE004CF114 /* ContentView.swift */,
 				CAA2B8D5264D636E004CF114 /* MasterView.swift */,
+				CA7E1065265DBBD5001F9252 /* EateryData.swift */,
 				CAA2B8DF264DFD00004CF114 /* RowView.swift */,
 				CAA2B8E4264DFFC8004CF114 /* DetailView.swift */,
 				CAB9401526567E9C00FB74D3 /* LocationView.swift */,
 				CAB9401026567DD500FB74D3 /* MapView.swift */,
 				CAA2B8EE264E6FEC004CF114 /* ImageDownloader.swift */,
 				CAA2B877264D4E22004CF114 /* Eatery+ViewModel.swift */,
+				CA7E106A265DBF4C001F9252 /* EateryTwo+ViewModel.swift */,
 				CAA2B8E9264E0168004CF114 /* Review+ViewModel.swift */,
 				CAA2B8DA264DE717004CF114 /* AllEateries+ViewModel.swift */,
 				CAA2B82F264D4603004CF114 /* Assets.xcassets */,
@@ -331,10 +337,12 @@
 				CAB9401626567E9C00FB74D3 /* LocationView.swift in Sources */,
 				CAA2B8D6264D636E004CF114 /* MasterView.swift in Sources */,
 				CAB9401126567DD500FB74D3 /* MapView.swift in Sources */,
+				CA7E106B265DBF4C001F9252 /* EateryTwo+ViewModel.swift in Sources */,
 				CAA2B8E5264DFFC8004CF114 /* DetailView.swift in Sources */,
 				CAA2B835264D4603004CF114 /* Persistence.swift in Sources */,
 				CAA2B82E264D45FE004CF114 /* ContentView.swift in Sources */,
 				CAA2B8EA264E0168004CF114 /* Review+ViewModel.swift in Sources */,
+				CA7E1066265DBBD5001F9252 /* EateryData.swift in Sources */,
 				CAA2B8E0264DFD00004CF114 /* RowView.swift in Sources */,
 				CAA2B8EF264E6FED004CF114 /* ImageDownloader.swift in Sources */,
 				CAA2B838264D4603004CF114 /* EateriesCoreData.xcdatamodeld in Sources */,

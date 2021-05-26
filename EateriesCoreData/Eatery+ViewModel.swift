@@ -36,24 +36,16 @@ extension Eatery {
         get { reviews?.array as? [Review] ?? [] }
         set { reviews = NSOrderedSet(array: newValue) }
     }
-    /*
-    struct Coordinates: Hashable, Codable {
-        var latitude: Double
-        var longitude: Double
+    
+    var latitudeString: String {
+        get { latitude ?? ""}
+        set { latitude = newValue }
     }
     
-    var coordinates: Coordinates {
-        get { Coordinates.latitude: 0.0, Coordinates.longitude: 0.0 }
-        set { Coordinates = newValue }
+    var longitudeString: String {
+        get { longitude ?? ""}
+        set { longitude = newValue }
     }
-    
-    var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude)
-    }
-    */
-    
     
     var viewContext: NSManagedObjectContext {
         managedObjectContext ?? NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
