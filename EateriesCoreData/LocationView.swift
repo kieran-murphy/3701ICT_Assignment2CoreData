@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LocationView: View {
     @ObservedObject var eatery: Eatery
-    @State var currentPosition = CLLocationCoordinate2D(latitude: 10, longitude: 5)
+    @State var currentPosition = CLLocationCoordinate2D(latitude: -28.0017655, longitude: 153.416012)
     //@State var locationName = ""
     @State var latitudeString = ""
     @State var longitudeString = ""
